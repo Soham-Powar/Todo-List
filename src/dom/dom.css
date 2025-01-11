@@ -1,0 +1,19 @@
+footer {
+	background-color: pink;
+}
+
+header {
+	height: 10vh;
+	font-size: 2rem;
+	padding-left: 25px;
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	background-color: red;
+}
+
+.main-container {
+	background-color: rebeccapurple;
+}
