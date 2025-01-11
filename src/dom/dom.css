@@ -12,8 +12,34 @@ header {
 
 .menu {
 	background-color: red;
+	padding: 10px;
+}
+
+.default-menu {
+	background-color: pink;
+}
+
+.projects-menu {
+	background-color: aqua;
+}
+
+.projects-menu div:first-of-type {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	font-size: 24px;
+}
+
+.projects-menu div:first-of-type>button {
+	background-color: transparent;
+	border: none;
 }
 
 .main-container {
 	background-color: rebeccapurple;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
 }
