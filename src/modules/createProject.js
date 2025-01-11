@@ -9,8 +9,7 @@ export default class project {
 	}
 
 	delete(todo) {
-		return this
-			.projectTodos
-			.find((object) => object.title === todo.title)
+		const indexOfTodo = this.projectTodos.indexOf(todo);
+		this.projectTodos.splice(indexOfTodo, 1);
 	}
 };
