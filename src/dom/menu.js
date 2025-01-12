@@ -3,6 +3,8 @@ import './dom.css'
 const menu = document.querySelector('.menu');
 const defaultMenu = document.createElement('div');
 const projectsMenu = document.createElement('div');
+const addTodoDialog = document.querySelector('dialog[class="add-todo"]');
+const addTodoBtn = document.querySelector('.add-todo button');
 
 defaultMenu.classList.add('default-menu');
 projectsMenu.classList.add('projects-menu');
@@ -31,6 +33,10 @@ defaultMenu.appendChild(thisWeek);
 // addProjectBtn.addEventListener('click', () => {
 
 // });
+
+addTodoBtn.addEventListener('click', () => {
+	console.log(addTodoDialog);
+})
 
 export default function renderMenu() {
 	menu.appendChild(defaultMenu);
