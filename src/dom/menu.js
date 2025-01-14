@@ -23,6 +23,10 @@ const thisWeek = document.createElement('div');
 inbox.innerHTML = 'Inbox'
 today.innerHTML = 'Today'
 thisWeek.innerHTML = 'This Week'
+inbox.classList.add('todo-holder')
+inbox.classList.add('active-project')
+today.classList.add('todo-holder')
+thisWeek.classList.add('todo-holder')
 
 defaultMenu.appendChild(inbox);
 defaultMenu.appendChild(today);

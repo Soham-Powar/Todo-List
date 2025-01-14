@@ -1,6 +1,8 @@
 import './styles.css';
 import createTodo from './modules/createTodo';
 import createProject from './modules/createProject';
+import getActiveProject from './modules/getActiveProject';
+import setActiveProject from './modules/setActiveProject';
 
 import renderFooter from './dom/footer';
 import renderHeader from './dom/header';
@@ -19,7 +21,11 @@ inbox.addTodo(todo3);
 renderFooter();
 renderHeader();
 renderMenu();
-renderMainContainer(inbox);
+setActiveProject();
+if(getActiveProject() == 'inbox') {
+	renderMainContainer(inbox);
+}
+// renderMainContainer(activeProject);
 
 
 // console.log(inbox);

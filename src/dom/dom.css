@@ -48,9 +48,19 @@ form {
 	padding: 20px;
 }
 
-.main-container>h3 {
-	font-size: xx-large;
+.head {
+	display: flex;
+	justify-content: space-between;
 	padding: 10px;
+}
+
+.head>h3 {
+	font-size: 2rem;
+}
+
+.head>button {
+	padding: 3px 13px;
+	font-size: 2rem;
 }
 
 .todo {

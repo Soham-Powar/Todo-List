@@ -1,7 +1,7 @@
 import './dom.css'
 
 const mainContainer = document.querySelector('.main-container');
-const mainContainerHeading = document.querySelector('.main-container > h3')
+const mainContainerHeading = document.querySelector('.head > h3')
 const todoContainer = document.createElement('div');
 todoContainer.classList.add('todo-container');
 mainContainer.appendChild(todoContainer);
@@ -22,7 +22,7 @@ export default function renderMainContainer(project) {
 		`;
 		todoDueDate.innerHTML = `
 			${todoTask.dueDate}
-		`
+		`;
 		todo.appendChild(todoTitle);
 		todo.appendChild(todoDueDate);
 		todoContainer.appendChild(todo);
