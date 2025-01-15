@@ -3,6 +3,7 @@ import createTodo from './modules/createTodo';
 import createProject from './modules/createProject';
 import getActiveProject from './modules/getActiveProject';
 import setActiveProject from './modules/setActiveProject';
+import addTodoToProject from './modules/addTodoToProject';
 
 import renderFooter from './dom/footer';
 import renderHeader from './dom/header';
@@ -18,6 +19,7 @@ inbox.addTodo(todo1);
 inbox.addTodo(todo2);
 inbox.addTodo(todo3);
 
+addTodoToProject();
 renderFooter();
 renderHeader();
 renderMenu();
