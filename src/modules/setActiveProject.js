@@ -3,7 +3,7 @@ export default function setActiveProject() {
     allProjects.forEach((project) => {
         project.addEventListener('click', () => {
             allProjects.forEach((proj) => proj.classList.remove('active-project'));
-            console.log('suii');
+			console.log(project.innerHTML);
             project.classList.add('active-project');
         });
     });

@@ -1,4 +1,5 @@
-export default function () {
+export default function (allProjectsArray) {
 	const activeProject = document.querySelector(".active-project");
-	return activeProject.innerHTML.toLowerCase();
+	const activeProjectName = activeProject.innerHTML.toLowerCase();
+	return allProjectsArray.find(({title}) => title === activeProjectName);
 }

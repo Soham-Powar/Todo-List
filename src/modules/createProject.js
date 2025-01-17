@@ -2,6 +2,7 @@ export default class project {
 	constructor(title) {
 		this.title = title;
 		this.projectTodos = [];
+		this.active = false;
 	}
 
 	addTodo(todo) {

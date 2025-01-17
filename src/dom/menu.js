@@ -23,8 +23,8 @@ const thisWeek = document.createElement('div');
 inbox.innerHTML = 'Inbox'
 today.innerHTML = 'Today'
 thisWeek.innerHTML = 'This Week'
-inbox.classList.add('todo-holder')
 inbox.classList.add('active-project')
+inbox.classList.add('todo-holder')
 today.classList.add('todo-holder')
 thisWeek.classList.add('todo-holder')
 
