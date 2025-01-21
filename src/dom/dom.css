@@ -66,8 +66,9 @@ form {
 
 .todo {
 	background-color: green;
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 20px 1fr 100px 40px;
+	gap: 15px;
 	padding: 15px;
 }
 
