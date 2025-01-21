@@ -1,6 +1,5 @@
 import createTodo from './createTodo';
 import renderMainContainer from '../dom/mainContainer';
-import allProjectsArray from '..';
 import getActiveProject from './getActiveProject';
 
 const addTodoBtn = document.querySelector('.add-todo-btn');

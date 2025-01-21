@@ -54,6 +54,9 @@ menuProjects.forEach((project) => {
 	});
 });
 
+//add add project logic
+//display the added project logic
+
 
 
 
