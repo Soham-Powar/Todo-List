@@ -1,8 +1,6 @@
 import './styles.css';
 import createTodo from './modules/createTodo';
 import createProject from './modules/createProject';
-import getActiveProject from './modules/getActiveProject';
-import setActiveProject from './modules/setActiveProject';
 import addTodoToProject from './modules/addTodoToProject';
 
 import renderFooter from './dom/footer';
@@ -29,14 +27,17 @@ today.addTodo(todo1);
 today.addTodo(todo2);
 thisWeek.addTodo(todo1);
 
+thisWeek.active = true;
 
 
-addTodoToProject();
+
+
 renderFooter();
 renderHeader();
 renderMenu();
 
-setActiveProject();
-renderMainContainer(getActiveProject(allProjectsArray));
+
+console.log(allProjectsArray)
+renderMainContainer(allProjectsArray);
 
 

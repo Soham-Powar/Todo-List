@@ -1,12 +1,12 @@
 import createTodo from './createTodo';
-import getActiveProject from './getActiveProject';
+import renderMainContainer from '../dom/mainContainer';
 
 const addTodoBtn = document.querySelector('.add-todo-btn');
 const addTodoDialog = document.querySelector('.add-todo-dialog');
 const addTodoForm = document.querySelector('.add-todo-dialog > form');
 
 
-export default function addTodoToProject () {
+export default function addTodoToProject (allProjectsArray) {
 	addTodoBtn.addEventListener('click', () => {
 		addTodoDialog.showModal();
 		addTodoForm.addEventListener('submit', (e) => {
@@ -17,6 +17,9 @@ export default function addTodoToProject () {
 			const date = e.target.date.value;
 
 			const newTodo = new createTodo(title, description, priority, date);
+			const activeProject = getActiveProject(allProjectsArray);
+			activeProject.addTodo(newTodo);
+            renderMainContainer(getActiveProject(allProjectsArray));
 		});
 	});
 }

@@ -6,7 +6,9 @@ const todoContainer = document.createElement('div');
 todoContainer.classList.add('todo-container');
 mainContainer.appendChild(todoContainer);
 
-export default function renderMainContainer(project) {
+export default function renderMainContainer(projectsArray) {
+	const project = projectsArray.find(project => project.active === true);
+
 	mainContainerHeading.innerHTML = `
 		${project.title}
 	`;
