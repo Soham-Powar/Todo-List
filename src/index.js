@@ -2,14 +2,15 @@ import './styles.css';
 import createTodo from './modules/createTodo';
 import createProject from './modules/createProject';
 import addTodoToProject from './modules/addTodoToProject';
-import changeActiveProject from './dom/changeActiveProject';
 
 import renderFooter from './dom/footer';
 import renderHeader from './dom/header';
 import renderMenu from './dom/menu';
 import renderMainContainer from './dom/mainContainer';
 
+
 const allProjectsArray = [];
+export default allProjectsArray;
 
 const inbox = new createProject('inbox');
 allProjectsArray.push(inbox);
@@ -35,8 +36,8 @@ renderFooter();
 renderHeader();
 renderMenu();
 
-// changeActiveProject();
-// renderMainContainer(allProjectsArray);
+renderMainContainer();
+addTodoToProject(allProjectsArray);
 
 const menuProjects = document.querySelectorAll('.todo-holder');
 menuProjects.forEach((project) => {
@@ -48,10 +49,11 @@ menuProjects.forEach((project) => {
 		allProjectsArray.forEach((proj) => {
 			proj.active = proj.title === projectName;
 		});
-
-		renderMainContainer(allProjectsArray);
+		renderMainContainer();
+		addTodoToProject(allProjectsArray);
 	});
 });
+
 
 
 

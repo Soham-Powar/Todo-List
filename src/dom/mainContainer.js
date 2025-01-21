@@ -1,4 +1,5 @@
 import './dom.css'
+import getActiveProject from '../modules/getActiveProject';
 
 const mainContainer = document.querySelector('.main-container');
 const mainContainerHeading = document.querySelector('.head > h3')
@@ -6,9 +7,9 @@ const todoContainer = document.createElement('div');
 todoContainer.classList.add('todo-container');
 mainContainer.appendChild(todoContainer);
 
-export default function renderMainContainer(projectsArray) {
+export default function renderMainContainer() {
 	todoContainer.innerHTML = '';
-	const project = projectsArray.find(project => project.active === true);
+	const project = getActiveProject();
 
 	mainContainerHeading.innerHTML = `
 		${project.title}
