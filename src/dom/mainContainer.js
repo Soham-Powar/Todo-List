@@ -7,6 +7,7 @@ todoContainer.classList.add('todo-container');
 mainContainer.appendChild(todoContainer);
 
 export default function renderMainContainer(projectsArray) {
+	todoContainer.innerHTML = '';
 	const project = projectsArray.find(project => project.active === true);
 
 	mainContainerHeading.innerHTML = `
