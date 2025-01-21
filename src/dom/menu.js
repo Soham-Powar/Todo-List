@@ -32,11 +32,6 @@ defaultMenu.appendChild(inbox);
 defaultMenu.appendChild(today);
 defaultMenu.appendChild(thisWeek);
 
-
-addTodoBtn.addEventListener('click', () => {
-	console.log(addTodoDialog);
-})
-
 export default function renderMenu() {
 	menu.appendChild(defaultMenu);
 	menu.appendChild(projectsMenu);

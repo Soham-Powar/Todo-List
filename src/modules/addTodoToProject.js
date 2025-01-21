@@ -21,9 +21,7 @@ export default function addTodoToProject () {
 
         const newTodo = new createTodo(title, description, priority, date);
         const activeProject = getActiveProject();
-        console.log(activeProject);
         activeProject.addTodo(newTodo);
-        console.log(activeProject);
         renderMainContainer();
         addTodoForm.reset();
         addTodoDialog.close();
