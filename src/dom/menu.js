@@ -33,11 +33,6 @@ defaultMenu.appendChild(today);
 defaultMenu.appendChild(thisWeek);
 
 
-// const addProjectBtn = document.querySelector('.add-project-btn');
-// addProjectBtn.addEventListener('click', () => {
-
-// });
-
 addTodoBtn.addEventListener('click', () => {
 	console.log(addTodoDialog);
 })

@@ -54,6 +54,29 @@ menuProjects.forEach((project) => {
 	});
 });
 
+const addProjectBtn = document.querySelector('.add-project-btn');
+const addProjectDialog = document.querySelector('.add-project-dialog');
+const addProjectForm = document.querySelector('.add-project-dialog form');
+
+addProjectBtn.addEventListener('click', () => {
+	addProjectDialog.showModal();
+});
+
+addProjectForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const title = e.target.project_title.value;
+	// const description = e.target.project_description.value;
+
+	const newProject = new createProject(title);
+	allProjectsArray.push(newProject);
+	addProjectForm.reset();
+	addProjectDialog.close();
+	console.log(allProjectsArray);
+});
+
+
+//checkbox to strikethrough the todo
+//cross to delete the todo
 //add add project logic
 //display the added project logic
 
