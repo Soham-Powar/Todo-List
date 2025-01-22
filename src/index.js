@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	handleProjectDialog(allProjectsArray, renderNewProject);
 });
 
+//check everything
+//fix the project add thingy
+//date and storage.
+
 
 
 

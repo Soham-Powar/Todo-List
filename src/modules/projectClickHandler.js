@@ -1,5 +1,7 @@
 export default function handleProjectClicks(allProjectsArray, renderMainContainer, manageTodoCheckboxes, manageTodoDeletion, addTodoToProject) {
 	const menuProjects = document.querySelectorAll('.todo-holder');
+	console.log(menuProjects);
+	console.log(allProjectsArray);
 	menuProjects.forEach((project) => {
 		project.addEventListener('click', () => {
 			const projectName = project.innerHTML
@@ -7,6 +9,9 @@ export default function handleProjectClicks(allProjectsArray, renderMainContaine
 					index === 0 ? word.toLowerCase() : word.toUpperCase()
 				)
 				.replace(/\s+/g, '');
+
+				console.log(menuProjects);
+	console.log(allProjectsArray);
 
 			allProjectsArray.forEach((proj) => {
 				proj.active = proj.title === projectName;
