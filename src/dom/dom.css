@@ -9,10 +9,12 @@ header {
 	padding-left: 25px;
 	display: flex;
 	align-items: center;
+	background-color: #120D31;
+	color: #fff8f0;
 }
 
 .menu {
-	background-color: red;
+	background-color: #120D31;
 	padding: 10px;
 }
 
@@ -37,7 +39,7 @@ header {
 }
 
 .main-container {
-	background-color: rebeccapurple;
+	background-color: #7EA3CC;
 }
 
 form {
@@ -65,7 +67,8 @@ form {
 }
 
 .todo {
-	background-color: green;
+	background-color: #6E5ED4;
+	color: #fff8f0;
 	display: grid;
 	grid-template-columns: 20px 1fr 100px 40px;
 	gap: 15px;
@@ -73,7 +76,7 @@ form {
 }
 
 .todo-container {
-	background-color: rgba(255, 255, 0, 0.582);
+	background-color: #A7C0DC;
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
