@@ -76,6 +76,21 @@ addProjectForm.addEventListener('submit', (e) => {
 
 
 //checkbox to strikethrough the todo
+
+const todoCheckboxes = document.querySelectorAll('.todo > input');
+
+todoCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', function () {
+        const todoTitle = this.closest('.todo').querySelector('.todo-title'); // Find the todo-title relative to the checkbox
+
+        if (this.checked) {
+            todoTitle.style.textDecoration = 'line-through'; // Strikethrough the text
+        } else {
+            todoTitle.style.textDecoration = 'none'; // Remove strikethrough
+        }
+    });
+});
+
 //cross to delete the todo
 //add add project logic
 //display the added project logic
