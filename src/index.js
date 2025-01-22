@@ -20,9 +20,9 @@ allProjectsArray.push(today);
 const thisWeek = new createProject('thisWeek');
 allProjectsArray.push(thisWeek);
 
-const todo1 = new createTodo('soham', 'sfef', 13, 1, false);
-const todo2 = new createTodo('socwam', 'sfef', 131, 12, false);
-const todo3 = new createTodo('sowafcwam', 'sfef', 131132, 12, false);
+const todo1 = new createTodo('soham', 'sfef', '2025-01-18', 'low', false);
+const todo2 = new createTodo('socwam', 'sfef', '2025-01-17', 'medium', false);
+const todo3 = new createTodo('sowafcwam', 'sfef', '2025-01-24', 'high', false);
 inbox.addTodo(todo1);
 inbox.addTodo(todo2);
 inbox.addTodo(todo3);
