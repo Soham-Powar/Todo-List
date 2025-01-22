@@ -17,7 +17,7 @@ export function manageTodoCheckboxes() {
     });
 }
 
-export function manageTodoDeletion(allProjectsArray) {
+export function manageTodoDeletion() {
     const deleteButtons = document.querySelectorAll('.todo button');
 
     deleteButtons.forEach((button) => {
@@ -26,7 +26,6 @@ export function manageTodoDeletion(allProjectsArray) {
             const todoTitle = todoContainer.querySelector('.todo-title').innerText;
 
 			const activeProject = getActiveProject();
-			console.log(todoTitle);
 			activeProject.delete(todoTitle);
 			renderMainContainer();
 			manageTodoCheckboxes();
