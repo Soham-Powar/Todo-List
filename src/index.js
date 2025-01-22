@@ -2,6 +2,7 @@ import './styles.css';
 import createTodo from './modules/createTodo';
 import createProject from './modules/createProject';
 import addTodoToProject from './modules/addTodoToProject';
+import { manageTodoCheckboxes, manageTodoDeletion } from './modules/todoManager';
 
 import renderFooter from './dom/footer';
 import renderHeader from './dom/header';
@@ -37,8 +38,12 @@ renderHeader();
 renderMenu();
 
 renderMainContainer();
+manageTodoCheckboxes();
+manageTodoDeletion();
 addTodoToProject(allProjectsArray);
 
+
+//project btns in menu click
 const menuProjects = document.querySelectorAll('.todo-holder');
 menuProjects.forEach((project) => {
 	project.addEventListener('click', () => {
@@ -50,10 +55,14 @@ menuProjects.forEach((project) => {
 			proj.active = proj.title === projectName;
 		});
 		renderMainContainer();
+		manageTodoCheckboxes();
+		manageTodoDeletion();
 		addTodoToProject(allProjectsArray);
 	});
 });
 
+
+//project dialog on click
 const addProjectBtn = document.querySelector('.add-project-btn');
 const addProjectDialog = document.querySelector('.add-project-dialog');
 const addProjectForm = document.querySelector('.add-project-dialog form');
@@ -74,22 +83,6 @@ addProjectForm.addEventListener('submit', (e) => {
 	console.log(allProjectsArray);
 });
 
-
-//checkbox to strikethrough the todo
-
-const todoCheckboxes = document.querySelectorAll('.todo > input');
-
-todoCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', function () {
-        const todoTitle = this.closest('.todo').querySelector('.todo-title'); // Find the todo-title relative to the checkbox
-
-        if (this.checked) {
-            todoTitle.style.textDecoration = 'line-through'; // Strikethrough the text
-        } else {
-            todoTitle.style.textDecoration = 'none'; // Remove strikethrough
-        }
-    });
-});
 
 //cross to delete the todo
 //add add project logic
