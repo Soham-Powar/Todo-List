@@ -1,4 +1,5 @@
 import getActiveProject from "./getActiveProject";
+import renderMainContainer from "../dom/mainContainer";
 
 export function manageTodoCheckboxes() {
     const todoCheckboxes = document.querySelectorAll('.todo > input');
@@ -24,7 +25,10 @@ export function manageTodoDeletion(allProjectsArray) {
             const todoContainer = this.closest('.todo');
             const todoTitle = todoContainer.querySelector('.todo-title').innerText;
 
+			const activeProject = getActiveProject();
 			console.log(todoTitle);
+			activeProject.delete(todoTitle);
+			renderMainContainer();
         });
     });
 }
