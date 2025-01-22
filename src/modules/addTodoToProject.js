@@ -20,9 +20,10 @@ export default function addTodoToProject () {
         const priority = e.target.priority.value;
         const date = e.target.date.value;
 
-        const newTodo = new createTodo(title, description, priority, date);
+        const newTodo = new createTodo(title, description, date, priority);
         const activeProject = getActiveProject();
         activeProject.addTodo(newTodo);
+        console.log(activeProject);
         renderMainContainer();
         manageTodoCheckboxes();
         manageTodoDeletion();
