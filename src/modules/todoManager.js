@@ -29,6 +29,8 @@ export function manageTodoDeletion(allProjectsArray) {
 			console.log(todoTitle);
 			activeProject.delete(todoTitle);
 			renderMainContainer();
+			manageTodoCheckboxes();
+        	manageTodoDeletion();
         });
     });
 }

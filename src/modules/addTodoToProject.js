@@ -1,6 +1,7 @@
 import createTodo from './createTodo';
 import renderMainContainer from '../dom/mainContainer';
 import getActiveProject from './getActiveProject';
+import { manageTodoCheckboxes, manageTodoDeletion } from './todoManager';
 
 const addTodoBtn = document.querySelector('.add-todo-btn');
 const addTodoDialog = document.querySelector('.add-todo-dialog');
@@ -23,6 +24,8 @@ export default function addTodoToProject () {
         const activeProject = getActiveProject();
         activeProject.addTodo(newTodo);
         renderMainContainer();
+        manageTodoCheckboxes();
+        manageTodoDeletion();
         addTodoForm.reset();
         addTodoDialog.close();
     });
