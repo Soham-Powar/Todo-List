@@ -8,6 +8,7 @@ import renderFooter from './dom/footer';
 import renderHeader from './dom/header';
 import renderMenu from './dom/menu';
 import renderMainContainer from './dom/mainContainer';
+import renderNewProject from './dom/renderNewProjects';
 
 
 const allProjectsArray = [];
@@ -81,6 +82,7 @@ addProjectForm.addEventListener('submit', (e) => {
 	addProjectForm.reset();
 	addProjectDialog.close();
 	console.log(allProjectsArray);
+	renderNewProject();
 });
 
 

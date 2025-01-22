@@ -15,18 +15,27 @@ header {
 
 .menu {
 	background-color: #120D31;
-	padding: 10px;
 }
 
 .default-menu {
 	background-color: pink;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	font-size: large;
+}
+
+.default-menu>div:hover {
+	color: #6E5ED4;
 }
 
 .projects-menu {
 	background-color: aqua;
+	padding: 15px;
 }
 
-.projects-menu div:first-of-type {
+.projects-menu>div:first-of-type {
 	display: flex;
 	justify-content: space-between;
 	padding: 5px;
@@ -39,7 +48,8 @@ header {
 }
 
 .main-container {
-	background-color: #7EA3CC;
+	background-color: #302868;
+	color: white;
 }
 
 form {

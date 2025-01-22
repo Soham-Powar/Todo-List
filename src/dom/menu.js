@@ -3,8 +3,8 @@ import './dom.css'
 const menu = document.querySelector('.menu');
 const defaultMenu = document.createElement('div');
 const projectsMenu = document.createElement('div');
-const addTodoDialog = document.querySelector('dialog[class="add-todo"]');
-const addTodoBtn = document.querySelector('.add-todo-dialog button');
+// const addTodoDialog = document.querySelector('dialog[class="add-todo"]');
+// const addTodoBtn = document.querySelector('.add-todo-dialog button');
 
 defaultMenu.classList.add('default-menu');
 projectsMenu.classList.add('projects-menu');
@@ -13,6 +13,8 @@ projectsMenu.innerHTML = `
 	<div>
 		<h3>Projects</h3>
 		<button class = 'add-project-btn'>+</button>
+	</div>
+	<div class = 'new-projects-container'>
 	</div>
 `;
 
@@ -23,7 +25,6 @@ const thisWeek = document.createElement('div');
 inbox.innerHTML = 'Inbox'
 today.innerHTML = 'Today'
 thisWeek.innerHTML = 'This Week'
-inbox.classList.add('active-project')
 inbox.classList.add('todo-holder')
 today.classList.add('todo-holder')
 thisWeek.classList.add('todo-holder')
