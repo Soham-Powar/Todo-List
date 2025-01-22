@@ -6,8 +6,9 @@ export default function renderNewProject() {
 
 	newProjectsContainer.innerHTML = '';
 
-	allProjectsArray.forEach((newProject) => {
+	allProjectsArray.slice(3).forEach((newProject) => {
 		const newProjectDiv = document.createElement('div');
+		newProjectDiv.classList.add('todo-holder');
 		newProjectDiv.innerText = newProject.title;
 		newProjectsContainer.appendChild(newProjectDiv);
 	});

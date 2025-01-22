@@ -86,11 +86,5 @@ addProjectForm.addEventListener('submit', (e) => {
 });
 
 
-//add add project logic
-//display the added project logic
-//storage
-//date format
-
-
 
 
