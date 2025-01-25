@@ -4,9 +4,9 @@ import createTodo from './createTodo'
 const allProjectsArray = [];
 
 export default function initProjects() {
-	const inbox = new createProject('inbox');
-	const today = new createProject('today');
-	const thisWeek = new createProject('thisWeek');
+	const inbox = new createProject('Inbox');
+	const today = new createProject('Today');
+	const thisWeek = new createProject('This Week');
 
 	allProjectsArray.push(inbox, today, thisWeek);
 

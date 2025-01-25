@@ -9,46 +9,44 @@ header {
 	padding-left: 25px;
 	display: flex;
 	align-items: center;
-	background-color: #120D31;
-	color: #fff8f0;
+	color: #a81f00;
+	border-bottom: thin #E0E0E0 solid;
 }
 
 .menu {
-	background-color: #120D31;
+	background-color: #ffefe550;
 }
 
 .default-menu {
-	background-color: pink;
-	padding: 15px;
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 	font-size: large;
 }
 
-.default-menu>div:hover {
-	color: #6E5ED4;
+.todo-holder {
+	padding: 5px 15px;
 }
 
-.projects-menu {
-	background-color: aqua;
-	padding: 15px;
+.todo-holder:hover {
+	background-color: #F1F9FF;
 }
 
 .projects-menu>div:first-of-type {
+	color: #a81f00;
 	display: flex;
 	justify-content: space-between;
-	padding: 5px;
+	padding: 5px 15px;
 	font-size: 24px;
 }
 
 .projects-menu div:first-of-type>button {
 	background-color: transparent;
+	color: #a81f00;
 	border: none;
 }
 
 .main-container {
-	background-color: #302868;
 	color: white;
 }
 
@@ -69,26 +67,61 @@ form {
 
 .head>h3 {
 	font-size: 2rem;
+	color: #a81f00;
 }
 
 .head>button {
-	padding: 3px 13px;
-	font-size: 2rem;
+	background-color: #a81f00;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+	border: none;
+	padding: 12px 20px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.head>button:hover {
+	background-color: #831901;
 }
 
 .todo {
-	background-color: #6E5ED4;
-	color: #fff8f0;
+	background-color: #f9f9f9;
+	color: #333333;
+	border: #ffefe550 2px solid;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.3s ease;
 	display: grid;
 	grid-template-columns: 20px 1fr 100px 40px;
 	gap: 15px;
 	padding: 15px;
 }
 
+.todo:hover {
+	box-shadow: 0 2px 8px #9c8b8162;
+}
+
 .todo-container {
-	background-color: #A7C0DC;
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
 	gap: 15px;
+}
+
+.todo>button {
+	color: rgba(255, 0, 0, 0.527);
+	font-weight: bold;
+	border: none;
+	background: transparent;
+}
+
+.todo>button:hover {
+	color: rgba(255, 0, 0, 0.753);
+}
+
+.todo-due-title {
+	font-style: italic;
+	color: #666666;
 }

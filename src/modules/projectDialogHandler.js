@@ -15,7 +15,6 @@ export default function handleProjectDialog() {
 	addProjectForm.addEventListener('submit', (e) => {
 		e.preventDefault();
 		const title = e.target.project_title.value;
-
 		const newProject = new createProject(title);
 		allProjectsArray.push(newProject);
 		addProjectForm.reset();
