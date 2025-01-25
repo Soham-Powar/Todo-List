@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //date
-//also expand the todo to show description
+//also expand the todo to show description/edit details
 //also do something about priority
 
 
