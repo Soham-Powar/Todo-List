@@ -12,7 +12,7 @@ let isAddTodoListenerAttached = false;
 export default function addTodoToProject () {
 
     if(!isAddTodoListenerAttached) {
-        
+
         addTodoBtn.addEventListener('click', () => {
             addTodoDialog.showModal();
         });
@@ -29,7 +29,6 @@ export default function addTodoToProject () {
             const activeProject = getActiveProject();
             activeProject.addTodo(newTodo);
 
-            console.log(activeProject);
             renderMainContainer();
             manageTodoCheckboxes();
             manageTodoDeletion();

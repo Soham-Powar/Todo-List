@@ -8,8 +8,6 @@ export default function handleProjectClicks() {
 
 	menuProjects.forEach((project) => {
 		project.addEventListener('click', () => {
-			console.log(menuProjects);
-			console.log(allProjectsArray);
 			
 			const projectName = project.innerHTML
 				.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) =>

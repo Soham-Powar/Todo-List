@@ -21,7 +21,6 @@ export default function handleProjectDialog() {
 		addProjectForm.reset();
 		addProjectDialog.close();
 
-		console.log(allProjectsArray);
 		renderNewProject();
 		handleProjectClicks();
 	});

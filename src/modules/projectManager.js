@@ -15,6 +15,5 @@ export default function addProjectLogic(allProjectsArray) {
         allProjectsArray.push(newProject);
         addProjectForm.reset();
         addProjectDialog.close();
-        console.log(allProjectsArray);
     });
 }
