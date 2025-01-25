@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	handleProjectDialog();
 });
 
-//storage - readd the functionss.
-//inbox this week and today is twice
+
 //date
 //also expand the todo to show description
 //also do something about priority

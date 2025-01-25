@@ -1,5 +1,6 @@
 import getActiveProject from "./getActiveProject";
 import renderMainContainer from "../dom/mainContainer";
+import updateLocalStorage from "./updateLocalStorage";
 
 export function manageTodoCheckboxes() {
     const todoCheckboxes = document.querySelectorAll('.todo > input');
@@ -30,6 +31,7 @@ export function manageTodoDeletion() {
 			renderMainContainer();
 			manageTodoCheckboxes();
         	manageTodoDeletion();
+            updateLocalStorage();
         });
     });
 }
