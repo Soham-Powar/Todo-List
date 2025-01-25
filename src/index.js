@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Setup handlers
 	manageTodoCheckboxes();
 	manageTodoDeletion();
-	addTodoToProject(allProjectsArray);
+	addTodoToProject();
 	handleProjectClicks();
-	handleProjectDialog(allProjectsArray, renderNewProject);
+	handleProjectDialog();
 });
 
 //check everything
