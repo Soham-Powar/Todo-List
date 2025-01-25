@@ -3,8 +3,10 @@ import createTodo from './createTodo'
 
 
 export default function initProjects() {
-	const allProjectsArray = JSON.parse(localStorage.getItem('allProjectsArray'));
-	if(!allProjectsArray) {
+	let allProjectsArray = JSON.parse(localStorage.getItem('allProjectsArray'));
+
+	if(allProjectsArray === null) {
+		allProjectsArray = [];
 		const inbox = new createProject('Inbox');
 		const today = new createProject('Today');
 		const thisWeek = new createProject('This Week');
@@ -24,6 +26,27 @@ export default function initProjects() {
 		thisWeek.addTodo(todo1);
 
 		inbox.active = true;
+
+		console.log(allProjectsArray);
+		localStorage.setItem('allProjectsArray', JSON.stringify(allProjectsArray));
+	}
+
+	else {
+		allProjectsArray = allProjectsArray.map(unitProjectData => {
+			const projectInstance = new createProject(unitProjectData.title);
+
+			projectInstance.projectTodos = unitProjectData.projectTodos.map(todoData => {
+				return new createTodo(
+					todoData.title,
+					todoData.description,
+					todoData.dueDate,
+					todoData.priority,
+					todoData.taskDone,
+				);
+			});
+			projectInstance.active = unitProjectData.active;
+			return projectInstance;
+		});
 	}
 	return allProjectsArray;
 }

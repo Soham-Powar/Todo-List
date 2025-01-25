@@ -2,6 +2,7 @@ import createProject from './createProject';
 import handleProjectClicks from './projectClickHandler';
 import allProjectsArray from '../index';
 import renderNewProject from '../dom/renderNewProjects';
+import updateLocalStorage from './updateLocalStorage';
 
 export default function handleProjectDialog() {
 	const addProjectBtn = document.querySelector('.add-project-btn');
@@ -19,7 +20,7 @@ export default function handleProjectDialog() {
 		allProjectsArray.push(newProject);
 		addProjectForm.reset();
 		addProjectDialog.close();
-
+		updateLocalStorage();
 		renderNewProject();
 		handleProjectClicks();
 	});
