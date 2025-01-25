@@ -19,7 +19,7 @@ export function manageTodoCheckboxes() {
 }
 
 export function manageTodoDeletion() {
-    const deleteButtons = document.querySelectorAll('.todo button');
+    const deleteButtons = document.querySelectorAll('.todo button:first-of-type');
 
     deleteButtons.forEach((button) => {
         button.addEventListener('click', function () {

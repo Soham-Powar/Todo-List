@@ -1,6 +1,7 @@
 import './dom.css'
 import getActiveProject from '../modules/getActiveProject';
 import setPriorityStyle from './setPriorityStyle';
+import setDescriptionClickEvent from '../modules/setDescriptionClickEvent'
 
 const mainContainer = document.querySelector('.main-container');
 const mainContainerHeading = document.querySelector('.head > h3')
@@ -38,8 +39,18 @@ export default function renderMainContainer() {
 
 		const removeTodoBtn = document.createElement('button');
 		removeTodoBtn.innerHTML = 'X';
-
 		todo.appendChild(removeTodoBtn);
+
+		const moreTodoBtn = document.createElement('button');
+		moreTodoBtn.innerHTML = 'more';
+		setDescriptionClickEvent(moreTodoBtn, todoTask.description);
+		todo.appendChild(moreTodoBtn);
+
+		const editTodoBtn = document.createElement('button');
+		editTodoBtn.innerHTML = 'edit';
+		todo.appendChild(editTodoBtn);
+
+
 		todoContainer.appendChild(todo);
 		setPriorityStyle(todo, todoTask.priority);
 	});
