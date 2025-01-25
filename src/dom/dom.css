@@ -124,3 +124,15 @@ form {
 	font-style: italic;
 	color: #666666;
 }
+
+.priority-high {
+	border-left: 2px solid red;
+}
+
+.priority-medium {
+	border-left: 2px solid rgb(179, 179, 10);
+}
+
+.priority-low {
+	border-left: 2px solid green;
+}

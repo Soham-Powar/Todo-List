@@ -1,5 +1,6 @@
 import './dom.css'
 import getActiveProject from '../modules/getActiveProject';
+import setPriorityStyle from './setPriorityStyle';
 
 const mainContainer = document.querySelector('.main-container');
 const mainContainerHeading = document.querySelector('.head > h3')
@@ -40,5 +41,6 @@ export default function renderMainContainer() {
 
 		todo.appendChild(removeTodoBtn);
 		todoContainer.appendChild(todo);
+		setPriorityStyle(todo, todoTask.priority);
 	});
 }
