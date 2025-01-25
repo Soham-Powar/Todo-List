@@ -31,12 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	handleProjectDialog();
 });
 
-//check everything
-//fix the project add thingy
 //date and storage.
 //also expand the todo to show description
 //also do something about priority
-//css
 
 
 

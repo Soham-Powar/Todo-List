@@ -19,6 +19,7 @@ export default function handleProjectClicks() {
 			manageTodoCheckboxes();
 			manageTodoDeletion();
 			addTodoToProject();
+			console.log(allProjectsArray);
 		});
 	});
 }

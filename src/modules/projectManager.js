@@ -1,3 +1,5 @@
+import updateLocalStorage from "./updateLocalStorage";
+
 export default function addProjectLogic(allProjectsArray) {
     const addProjectBtn = document.querySelector('.add-project-btn');
     const addProjectDialog = document.querySelector('.add-project-dialog');
@@ -13,6 +15,7 @@ export default function addProjectLogic(allProjectsArray) {
 
         const newProject = new createProject(title);
         allProjectsArray.push(newProject);
+        updateLocalStorage();
         addProjectForm.reset();
         addProjectDialog.close();
     });
