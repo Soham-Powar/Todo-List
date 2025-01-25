@@ -27,13 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	manageTodoCheckboxes();
 	manageTodoDeletion();
 	addTodoToProject(allProjectsArray);
-	handleProjectClicks(allProjectsArray, renderMainContainer, manageTodoCheckboxes, manageTodoDeletion, addTodoToProject);
+	handleProjectClicks();
 	handleProjectDialog(allProjectsArray, renderNewProject);
 });
 
 //check everything
 //fix the project add thingy
 //date and storage.
+//also expand the todo to show description
+//also do something about priority
+//css
 
 
 

@@ -1,6 +1,9 @@
 import createProject from './createProject';
 import handleProjectClicks from './projectClickHandler';
-export default function handleProjectDialog(allProjectsArray, renderNewProject) {
+import allProjectsArray from '../index';
+import renderNewProject from '../dom/renderNewProjects';
+
+export default function handleProjectDialog() {
 	const addProjectBtn = document.querySelector('.add-project-btn');
 	const addProjectDialog = document.querySelector('.add-project-dialog');
 	const addProjectForm = document.querySelector('.add-project-dialog form');
@@ -20,6 +23,6 @@ export default function handleProjectDialog(allProjectsArray, renderNewProject) 
 
 		console.log(allProjectsArray);
 		renderNewProject();
-		handleProjectClicks(allProjectsArray, renderMainContainer, manageTodoCheckboxes, manageTodoDeletion, addTodoToProject);
+		handleProjectClicks();
 	});
 }

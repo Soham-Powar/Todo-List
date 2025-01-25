@@ -1,4 +1,9 @@
-export default function handleProjectClicks(allProjectsArray, renderMainContainer, manageTodoCheckboxes, manageTodoDeletion, addTodoToProject) {
+import allProjectsArray from '../index'
+import renderMainContainer from '../dom/mainContainer';
+import { manageTodoCheckboxes, manageTodoDeletion } from './todoManager';
+import addTodoToProject from './addTodoToProject';
+
+export default function handleProjectClicks() {
 	const menuProjects = document.querySelectorAll('.todo-holder');
 	console.log(menuProjects);
 	console.log(allProjectsArray);
@@ -9,9 +14,6 @@ export default function handleProjectClicks(allProjectsArray, renderMainContaine
 					index === 0 ? word.toLowerCase() : word.toUpperCase()
 				)
 				.replace(/\s+/g, '');
-
-				console.log(menuProjects);
-	console.log(allProjectsArray);
 
 			allProjectsArray.forEach((proj) => {
 				proj.active = proj.title === projectName;
