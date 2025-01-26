@@ -34,8 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //date
 //also expand the todo to show description/edit details
-//also do something about priority
-
+//remove project cross button -> remove project from the array
 
 
 
