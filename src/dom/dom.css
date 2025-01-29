@@ -136,3 +136,11 @@ form {
 .priority-low {
 	border-left: 2px solid green;
 }
+
+.todo-description {
+	grid-column: 1 / -1;
+}
+
+.hidden-description {
+	display: none;
+}
