@@ -1,8 +1,8 @@
 import './dom.css'
 import getActiveProject from '../modules/getActiveProject';
 import setPriorityStyle from './setPriorityStyle';
-import setDescriptionClickEvent from '../modules/setDescriptionClickEvent'
 import todoDescriptionToggle from './todoDescriptionToggle';
+import editTodoHandler from '../modules/editTodoHandler';
 
 const mainContainer = document.querySelector('.main-container');
 const mainContainerHeading = document.querySelector('.head > h3')
@@ -44,11 +44,11 @@ export default function renderMainContainer() {
 
 		const moreTodoBtn = document.createElement('button');
 		moreTodoBtn.innerHTML = 'more';
-		setDescriptionClickEvent(moreTodoBtn, todoTask.description);
 		todo.appendChild(moreTodoBtn);
 
 		const editTodoBtn = document.createElement('button');
 		editTodoBtn.innerHTML = 'edit';
+		editTodoHandler(editTodoBtn, todoTask);
 		todo.appendChild(editTodoBtn);
 
 		const descriptionPara = document.createElement('p');
