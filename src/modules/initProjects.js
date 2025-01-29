@@ -27,7 +27,6 @@ export default function initProjects() {
 
 		inbox.active = true;
 
-		console.log(allProjectsArray);
 		localStorage.setItem('allProjectsArray', JSON.stringify(allProjectsArray));
 	}
 
