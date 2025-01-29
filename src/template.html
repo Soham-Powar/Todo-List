@@ -18,9 +18,9 @@
 		<dialog class="add-todo-dialog">
 			<form action="">
 				<label for="title">Title:</label>
-				<input type="text" id="title">
+				<input type="text" id="title" placeholder="Todo Title" required>
 				<label for="description">Description:</label>
-				<input type="text" id="description">
+				<input type="text" id="description" placeholder="Todo Description">
 				<label for="priority">Priority:</label>
 				<select name="priority" id="priority">
 					<option value="low">Low</option>
@@ -29,17 +29,15 @@
 				</select>
 				<label for="date">Date:</label>
 				<input type="date" name="date" id="date">
-				<button type="submit">Submit</button>
+				<button type="submit">Add Todo</button>
 			</form>
 		</dialog>
 
 		<dialog class="add-project-dialog">
 			<form action="">
 				<label for="title">Title:</label>
-				<input type="text" id="project_title">
-				<label for="description">Description:</label>
-				<input type="text" id="project_description">
-				<button type="submit">Submit</button>
+				<input type="text" id="project_title" placeholder="Project Title" required>
+				<button type="submit">Add Project</button>
 			</form>
 		</dialog>
 

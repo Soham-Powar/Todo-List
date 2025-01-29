@@ -144,3 +144,29 @@ form {
 .hidden-description {
 	display: none;
 }
+
+dialog {
+	margin: auto;
+	border: none;
+	background-color: #FFFAF7;
+	border: 2px solid #a81f00;
+	border-radius: 15px;
+}
+
+::backdrop {
+	backdrop-filter: blur(5px);
+}
+
+form>input {
+	border: none;
+	height: 30px;
+}
+
+form>button {
+	background-color: #a81f00;
+	border: none;
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 15px;
+	color: white;
+}
