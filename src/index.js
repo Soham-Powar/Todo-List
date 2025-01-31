@@ -32,9 +32,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//date
-//expand the todo to edit details
-//remove project cross button -> remove project from the array
-
-
 

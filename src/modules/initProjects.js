@@ -1,5 +1,6 @@
-import createProject from './createProject'
-import createTodo from './createTodo'
+import createProject from './createProject';
+import createTodo from './createTodo';
+import { format } from 'date-fns';
 
 
 export default function initProjects() {
@@ -13,9 +14,9 @@ export default function initProjects() {
 
 		allProjectsArray.push(inbox, today, thisWeek);
 
-		const todo1 = new createTodo('Fix bugs in user authentication', 'do it asap', '2025-01-18', 'low', false);
-		const todo2 = new createTodo('Write a summary of annual report', 'do it', '2025-01-17', 'medium', false);
-		const todo3 = new createTodo('Drink water', 'do it everyday', '2025-01-24', 'high', false);
+		const todo1 = new createTodo('Fix bugs in user authentication system', 'do it asap', format(new Date(), "dd/MM/yyyy"), 'low', false);
+		const todo2 = new createTodo('Write a summary of annual report', 'do it', format(new Date(), "dd/MM/yyyy"), 'medium', false);
+		const todo3 = new createTodo('Drink water', 'do it everyday', format(new Date(), "dd/MM/yyyy"), 'high', false);
 
 		inbox.addTodo(todo1);
 		inbox.addTodo(todo2);

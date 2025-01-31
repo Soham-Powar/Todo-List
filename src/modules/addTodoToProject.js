@@ -3,6 +3,7 @@ import renderMainContainer from '../dom/mainContainer';
 import getActiveProject from './getActiveProject';
 import { manageTodoCheckboxes, manageTodoDeletion } from './todoManager';
 import updateLocalStorage from './updateLocalStorage';
+import { parseISO, format } from 'date-fns';
 
 const addTodoBtn = document.querySelector('.add-todo-btn');
 const addTodoDialog = document.querySelector('.add-todo-dialog');
@@ -24,7 +25,7 @@ export default function addTodoToProject () {
             const title = e.target.title.value;
             const description = e.target.description.value;
             const priority = e.target.priority.value;
-            const date = e.target.date.value;
+            const date = format(parseISO(e.target.date.value), "dd/MM/yyyy");            
 
             const newTodo = new createTodo(title, description, date, priority);
             const activeProject = getActiveProject();

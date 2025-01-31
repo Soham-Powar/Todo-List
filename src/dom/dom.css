@@ -25,6 +25,8 @@ header {
 
 .todo-holder {
 	padding: 5px 15px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .todo-holder:hover {
@@ -160,6 +162,7 @@ dialog {
 form>input {
 	border: none;
 	height: 30px;
+	padding: 3px 5px;
 }
 
 form>button {
@@ -169,4 +172,8 @@ form>button {
 	margin-top: 10px;
 	border-radius: 15px;
 	color: white;
+}
+
+.remove-project-btn:hover {
+	color: #831901;
 }

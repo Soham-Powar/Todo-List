@@ -3,8 +3,6 @@ import './dom.css'
 const menu = document.querySelector('.menu');
 const defaultMenu = document.createElement('div');
 const projectsMenu = document.createElement('div');
-// const addTodoDialog = document.querySelector('dialog[class="add-todo"]');
-// const addTodoBtn = document.querySelector('.add-todo-dialog button');
 
 defaultMenu.classList.add('default-menu');
 projectsMenu.classList.add('projects-menu');
