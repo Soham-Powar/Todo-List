@@ -10,7 +10,6 @@ export default function editTodoHandler(editTodoBtn, todo) {
 		addTodoForm.elements.description.value = todo.description;
 		addTodoForm.elements.priority.value = todo.priority;
 		addTodoForm.elements.date.value = format(parse(todo.dueDate, "dd/MM/yyyy", new Date()), "yyyy-MM-dd");
-		console.log(todo);
         addTodoDialog.showModal();
 		const activeProject = getActiveProject();
 		activeProject.delete(todo.title);	
