@@ -25,7 +25,7 @@ export default function addTodoToProject () {
             const title = e.target.title.value;
             const description = e.target.description.value;
             const priority = e.target.priority.value;
-            const date = format(parseISO(e.target.date.value), "dd/MM/yyyy");            
+            const date = format(parseISO(e.target.date.value), "dd/MM/yyyy");
 
             const newTodo = new createTodo(title, description, date, priority);
             const activeProject = getActiveProject();
