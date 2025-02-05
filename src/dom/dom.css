@@ -1,179 +1,179 @@
 footer {
-	text-align: center;
+  text-align: center;
 }
 
 header {
-	height: 10vh;
-	font-size: 2rem;
-	padding-left: 25px;
-	display: flex;
-	align-items: center;
-	color: #a81f00;
-	border-bottom: thin #E0E0E0 solid;
+  height: 10vh;
+  font-size: 2rem;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  color: #a81f00;
+  border-bottom: thin #e0e0e0 solid;
 }
 
 .menu {
-	background-color: #ffefe550;
+  background-color: #ffefe550;
 }
 
 .default-menu {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-	font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: large;
 }
 
 .todo-holder {
-	padding: 5px 15px;
-	display: flex;
-	justify-content: space-between;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .todo-holder:hover {
-	background-color: #F1F9FF;
+  background-color: #f1f9ff;
 }
 
-.projects-menu>div:first-of-type {
-	color: #a81f00;
-	display: flex;
-	justify-content: space-between;
-	padding: 5px 15px;
-	font-size: 24px;
+.projects-menu > div:first-of-type {
+  color: #a81f00;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  font-size: 24px;
 }
 
-.projects-menu div:first-of-type>button {
-	background-color: transparent;
-	color: #a81f00;
-	border: none;
+.projects-menu div:first-of-type > button {
+  background-color: transparent;
+  color: #a81f00;
+  border: none;
 }
 
 .main-container {
-	color: white;
+  color: white;
 }
 
 form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-container {
-	padding: 20px;
+  padding: 20px;
 }
 
 .head {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-.head>h3 {
-	font-size: 2rem;
-	color: #a81f00;
+.head > h3 {
+  font-size: 2rem;
+  color: #a81f00;
 }
 
-.head>button {
-	background-color: #a81f00;
-	color: #FFFFFF;
-	font-size: 18px;
-	font-weight: bold;
-	border: none;
-	padding: 12px 20px;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+.head > button {
+  background-color: #a81f00;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.head>button:hover {
-	background-color: #831901;
+.head > button:hover {
+  background-color: #831901;
 }
 
 .todo {
-	background-color: #f9f9f9;
-	color: #333333;
-	border: #ffefe550 2px solid;
-	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-	transition: box-shadow 0.3s ease;
-	display: grid;
-	grid-template-columns: 20px 1fr 100px 40px 40px 40px;
-	gap: 15px;
-	padding: 15px;
+  background-color: #f9f9f9;
+  color: #333333;
+  border: #ffefe550 2px solid;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  display: grid;
+  grid-template-columns: 20px 1fr 100px 40px 40px 40px;
+  gap: 15px;
+  padding: 15px;
 }
 
 .todo:hover {
-	box-shadow: 0 2px 8px #9c8b8162;
+  box-shadow: 0 2px 8px #9c8b8162;
 }
 
 .todo-container {
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	gap: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
 }
 
-.todo>button {
-	color: rgba(255, 0, 0, 0.527);
-	font-weight: bold;
-	border: none;
-	background: transparent;
+.todo > button {
+  color: rgba(255, 0, 0, 0.527);
+  font-weight: bold;
+  border: none;
+  background: transparent;
 }
 
-.todo>button:hover {
-	color: rgba(255, 0, 0, 0.753);
+.todo > button:hover {
+  color: rgba(255, 0, 0, 0.753);
 }
 
 .todo-due-title {
-	font-style: italic;
-	color: #666666;
+  font-style: italic;
+  color: #666666;
 }
 
 .priority-high {
-	border-left: 2px solid red;
+  border-left: 2px solid red;
 }
 
 .priority-medium {
-	border-left: 2px solid rgb(179, 179, 10);
+  border-left: 2px solid rgb(179, 179, 10);
 }
 
 .priority-low {
-	border-left: 2px solid green;
+  border-left: 2px solid green;
 }
 
 .todo-description {
-	grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .hidden-description {
-	display: none;
+  display: none;
 }
 
 dialog {
-	margin: auto;
-	border: none;
-	background-color: #FFFAF7;
-	border: 2px solid #a81f00;
-	border-radius: 15px;
+  margin: auto;
+  border: none;
+  background-color: #fffaf7;
+  border: 2px solid #a81f00;
+  border-radius: 15px;
 }
 
 ::backdrop {
-	backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
-form>input {
-	border: none;
-	height: 30px;
-	padding: 3px 5px;
+form > input {
+  border: none;
+  height: 30px;
+  padding: 3px 5px;
 }
 
-form>button {
-	background-color: #a81f00;
-	border: none;
-	padding: 5px;
-	margin-top: 10px;
-	border-radius: 15px;
-	color: white;
+form > button {
+  background-color: #a81f00;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 15px;
+  color: white;
 }
 
 .remove-project-btn:hover {
-	color: #831901;
+  color: #831901;
 }

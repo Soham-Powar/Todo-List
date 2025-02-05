@@ -1,11 +1,11 @@
-import './dom.css'
+import "./dom.css";
 
-const menu = document.querySelector('.menu');
-const defaultMenu = document.createElement('div');
-const projectsMenu = document.createElement('div');
+const menu = document.querySelector(".menu");
+const defaultMenu = document.createElement("div");
+const projectsMenu = document.createElement("div");
 
-defaultMenu.classList.add('default-menu');
-projectsMenu.classList.add('projects-menu');
+defaultMenu.classList.add("default-menu");
+projectsMenu.classList.add("projects-menu");
 
 projectsMenu.innerHTML = `
 	<div>
@@ -16,22 +16,22 @@ projectsMenu.innerHTML = `
 	</div>
 `;
 
-const inbox = document.createElement('div');
-const today = document.createElement('div');
-const thisWeek = document.createElement('div');
+const inbox = document.createElement("div");
+const today = document.createElement("div");
+const thisWeek = document.createElement("div");
 
-inbox.innerHTML = 'Inbox'
-today.innerHTML = 'Today'
-thisWeek.innerHTML = 'This Week'
-inbox.classList.add('todo-holder')
-today.classList.add('todo-holder')
-thisWeek.classList.add('todo-holder')
+inbox.innerHTML = "Inbox";
+today.innerHTML = "Today";
+thisWeek.innerHTML = "This Week";
+inbox.classList.add("todo-holder");
+today.classList.add("todo-holder");
+thisWeek.classList.add("todo-holder");
 
 defaultMenu.appendChild(inbox);
 defaultMenu.appendChild(today);
 defaultMenu.appendChild(thisWeek);
 
 export default function renderMenu() {
-	menu.appendChild(defaultMenu);
-	menu.appendChild(projectsMenu);
+  menu.appendChild(defaultMenu);
+  menu.appendChild(projectsMenu);
 }

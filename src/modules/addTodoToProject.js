@@ -1,45 +1,43 @@
-import createTodo from './createTodo';
-import renderMainContainer from '../dom/mainContainer';
-import getActiveProject from './getActiveProject';
-import { manageTodoCheckboxes, manageTodoDeletion } from './todoManager';
-import updateLocalStorage from './updateLocalStorage';
-import { parseISO, format } from 'date-fns';
+import createTodo from "./createTodo";
+import renderMainContainer from "../dom/mainContainer";
+import getActiveProject from "./getActiveProject";
+import { manageTodoCheckboxes, manageTodoDeletion } from "./todoManager";
+import updateLocalStorage from "./updateLocalStorage";
+import { parseISO, format } from "date-fns";
 
-const addTodoBtn = document.querySelector('.add-todo-btn');
-const addTodoDialog = document.querySelector('.add-todo-dialog');
-const addTodoForm = document.querySelector('.add-todo-dialog > form');
+const addTodoBtn = document.querySelector(".add-todo-btn");
+const addTodoDialog = document.querySelector(".add-todo-dialog");
+const addTodoForm = document.querySelector(".add-todo-dialog > form");
 
 let isAddTodoListenerAttached = false;
 
-export default function addTodoToProject () {
+export default function addTodoToProject() {
+  if (!isAddTodoListenerAttached) {
+    addTodoBtn.addEventListener("click", () => {
+      addTodoDialog.showModal();
+    });
 
-    if(!isAddTodoListenerAttached) {
+    addTodoForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-        addTodoBtn.addEventListener('click', () => {
-            addTodoDialog.showModal();
-        });
+      const title = e.target.title.value;
+      const description = e.target.description.value;
+      const priority = e.target.priority.value;
+      const date = format(parseISO(e.target.date.value), "dd/MM/yyyy");
 
-        addTodoForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+      const newTodo = new createTodo(title, description, date, priority);
+      const activeProject = getActiveProject();
+      activeProject.addTodo(newTodo);
+      updateLocalStorage();
 
-            const title = e.target.title.value;
-            const description = e.target.description.value;
-            const priority = e.target.priority.value;
-            const date = format(parseISO(e.target.date.value), "dd/MM/yyyy");
+      renderMainContainer();
+      manageTodoCheckboxes();
+      manageTodoDeletion();
 
-            const newTodo = new createTodo(title, description, date, priority);
-            const activeProject = getActiveProject();
-            activeProject.addTodo(newTodo);
-            updateLocalStorage();
+      addTodoForm.reset();
+      addTodoDialog.close();
+    });
 
-            renderMainContainer();
-            manageTodoCheckboxes();
-            manageTodoDeletion();
-
-            addTodoForm.reset();
-            addTodoDialog.close();
-        });
-
-        isAddTodoListenerAttached = true;
-    }
+    isAddTodoListenerAttached = true;
+  }
 }
